@@ -1,0 +1,4 @@
+# Enable Apache's mod_expires Module
+ExpiresActive On
+
+ExpiresDefault "access plus 1 minute"

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>IE8 Cache Buster</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <button class="js-refresh">GET Ajax request</button>
+
+        <h3>Reponse</h3>
+        <div class="js-results">
+
+        </div><!-- /.js-results -->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            $('.js-refresh').on('click', function() {
+                $.ajax({
+                    url: "ajax-response.php"
+                }).done(function(data) {
+                    $('.js-results').html(data);
+                });
+            });
+        </script>
+    </body>
+</html>
